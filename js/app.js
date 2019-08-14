@@ -55,7 +55,7 @@ if(q1 === 'yes' || q1 === 'y'){
 }   else{
     var q1 = 0;
 }
-console.log('converted q1 value is : ' + q1);
+console.log(likesDogs + ' converted q1 value is : ' + q1);
 //  Our model to turn our answers yes/no's into binary information is a success! Now we can start the arduous process of converting all of
 //      that information into usable data for our game model.
 
@@ -65,7 +65,7 @@ if(q2 === 'yes' || q2 === 'y'){
 }   else{
     var q2 = 0;
 }
-console.log('converted q2 value is : ' + q2);
+console.log(likesTravel + ' converted q2 value is : ' + q2);
 
 var q3 = likeToVisit.toLowerCase();
 console.log('q3 is a non-binary answer for var likeToVisit. q3 is : ' + likeToVisit);
@@ -115,5 +115,19 @@ if(q10 === 'yes' || q10 === 'y'){
     var q10 = 0;
 }
 console.log(primeNumber + ' converted q10 value is : ' + q10);
+
+//  We need to turn these strings into integers, otherwise we can't do the maths, y'know? Source: Google'd it.
+
+var qTally = Number(q1) + Number(q2) + Number(q4) + Number(q6) + Number(q7) + Number(q8) + Number(q10);
+console.log('Here is the total, qTally = ' + qTally);
+
+//  I needed to know how to display some variables from this .js file in the .html file. This soolution took much longer to find that I
+//      would like to admit.
+//      source https://stackoverflow.com/questions/9689109/how-to-display-javascript-variables-in-a-html-page-without-document-write/9689182
+//  I may end up needing to do this for many of the variables I've created so far. I would like them displayed inline with text in my body.
+document.querySelector('.qTally').innerHTML = qTally;
+
+//  We've now completed our introduction, our game questions, converted the answers into usable data, and tallied the total.
+
 
 
