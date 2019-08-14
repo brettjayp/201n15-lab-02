@@ -44,3 +44,27 @@ console.log(userName + '\'s family comes from: ' + heritage);
 var primeNumber = prompt('I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?');
 console.log('Is ' + userName + '\'s favorite number a prime number? : ' + primeNumber);
 
+//  We've now created and defined all the basic user answer variables through simple prompts. We've also thrown in a couple prompts. Now
+//      we will create a parallel set of variables that we'll use as a tally. We'll keep it simple, numbers 1-10, in order of when they
+//      were captured from the user.
+
+var q1 = likesDogs.toLowerCase();
+console.log('var q1 from likesDogs is value : ' + q1);
+if(q1 === 'yes' || q1 === 'y'){
+    var q1 = 1;
+}   else{
+    var q1 = 0;
+}
+console.log('converted q1 value is : ' + q1);
+//  Our model to turn our answers into binary informations is a success! Now we can start the arduous process of converting all of that
+//      information into usable data for our game model.
+
+var q2 = likesTravel.toLowerCase();
+console.log('var q2 from likesTravel is value : ' + q2);
+if(q2 === 'yes' || q2 === 'y'){
+    var q2 = 1;
+}   else{
+    var q2 = 0;
+}
+console.log('converted q2 value is : ' + q2);
+
