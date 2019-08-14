@@ -56,15 +56,64 @@ if(q1 === 'yes' || q1 === 'y'){
     var q1 = 0;
 }
 console.log('converted q1 value is : ' + q1);
-//  Our model to turn our answers into binary informations is a success! Now we can start the arduous process of converting all of that
-//      information into usable data for our game model.
+//  Our model to turn our answers yes/no's into binary information is a success! Now we can start the arduous process of converting all of
+//      that information into usable data for our game model.
 
 var q2 = likesTravel.toLowerCase();
-console.log('var q2 from likesTravel is value : ' + q2);
 if(q2 === 'yes' || q2 === 'y'){
     var q2 = 1;
 }   else{
     var q2 = 0;
 }
 console.log('converted q2 value is : ' + q2);
+
+var q3 = likeToVisit.toLowerCase();
+console.log('q3 is a non-binary answer for var likeToVisit. q3 is : ' + likeToVisit);
+
+var q4 = hasPets.toLowerCase();
+if(q4 === 'yes' || q4 === 'y'){
+    var q4 = 1;
+}   else{
+    var q4 = 0;
+}
+console.log(hasPets + ' converted q4 value is : ' + q4);
+
+var q5 = diy.toLowerCase();
+console.log('q5 is a non-binary answer for var diy. q3 is : ' + diy);
+
+var q6 = rickMorty.toLowerCase();
+if(q6 === 'yes' || q6 === 'y'){
+    var q6 = 1;
+}   else{
+    var q6 = 0;
+}
+console.log(rickMorty + ' converted q6 value is : ' + q6);
+
+var q7 = scubaDive.toLowerCase();
+if(q7 === 'yes' || q7 === 'y'){
+    var q7 = 1;
+}   else{
+    var q7 = 0;
+}
+console.log(scubaDive + ' converted q7 value is : ' + q7);
+
+var q8 = procrastinates.toLowerCase();
+if(q8 === 'yes' || q8 === 'y'){
+    var q8 = 1;
+}   else{
+    var q8 = 0;
+}
+console.log(procrastinates + ' converted q8 value is : ' + q8);
+
+var q9 = heritage.toLowerCase();
+console.log('q9 is a non-binary answer for var heritage. q9 is : ' + heritage);
+
+var q10 = primeNumber.toLowerCase();
+if(q10 === 'yes' || q10 === 'y'){
+    var q10 = 1;
+}   else{
+    var q10 = 0;
+}
+console.log(primeNumber + ' converted q10 value is : ' + q10);
+
 
