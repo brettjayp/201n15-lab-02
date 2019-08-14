@@ -1,0 +1,11 @@
+/* The following is an attempt to set a gif as the background. First attempts are not successful. Commenting out to keep available but not use */
+/* body{
+    background-image:url('https://media.giphy.com/media/9PTaAhwri56V2/giphy.gif');
+    background-position:center;
+    background-size:cover;
+} */
+
+body{
+    background-color:rgb(211, 196, 129);
+    color:rgb(73, 54, 118);
+}
