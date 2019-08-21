@@ -11,20 +11,20 @@ var lastYN = 0;
 var tally = 0;
 function plus1(){
   tally++;
+  lastYN = 1;
   console.log('Tally is now ' + tally + ' and lastYN value is ' + lastYN);
 }
 
 // Here we prepare the function for our first yes/no question. In it, we ask a question, the result of which becomes the value of the specified variable. We output to consol. If user answers yes, we run our tally function, and set our 'lastYN' value to 1 (yes), used later. If user answers no, we still ouput current values to console, and we set 'lastYN' to 0 (no).
 function yesNo(question, varname){
-var varname = prompt(question)
-console.log(question + ' ' + varname);
-if(varname.toLowerCase() === 'yes'){
-    plus1();
-    lastYN = 1;
+    var varname = prompt(question)
+    console.log(question + ' ' + varname);
+    if(varname.toLowerCase() === 'yes'){
+        plus1();
     } else {
-        console.log('Tally is still ' + tally + ' and lastYN value is ' + lastYN);
         lastYN = 0;
-    }
+        console.log('Tally is still ' + tally + ' and lastYN value is ' + lastYN);
+}
 }
 
 // Here we prepare our function for all yes/no questions after the first one. We use 'lastYN' to determine if we should start with an 'ifYes' or an 'ifNo' string, which allows us to "react" to the previous yes/no question while asking our next qeustion. This makes the game seem like it's responding to the users answers without littering the screen with multiple unnecessary alert windows. Other than that, it works the same as 'yesNo'.
@@ -35,6 +35,7 @@ function nextYN(ifYes, ifNo, question, varname){
         if(varname.toLowerCase() === 'yes'){
             plus1();
         } else {
+            lastYN = 0;
             console.log('Tally is still ' + tally + ' and lastYN value is ' + lastYN);
         }
     } else {
@@ -43,6 +44,7 @@ function nextYN(ifYes, ifNo, question, varname){
         if(varname.toLowerCase() === 'yes'){
             plus1();
         } else {
+            lastYN = 0;
             console.log('Tally is still ' + tally + ' and lastYN value is ' + lastYN);
         }
     }
@@ -82,18 +84,28 @@ nextYN('There are lots of places I would still like to visit.\n\n', 'There are l
 
 nextQ('That\'s cool, I think they make great companions!\n\n', 'Oh, I wonder why not. I think they are great fun.\n\n', 'I like to create things, whether with my hands or my mind. What\'s the last thing you built or made yourself?', diy);
 
-alert('Thank you for answering my questions. You\'re halfway there, almost done!');
+alert('Thank you for answering my questions. You\'re halfway there, keep on going!');
 
-yesNo('Rick and Morty has become a really popular show. Do you watch it?', rickMorty);
+//nextYN();
 
-yesNo('There\'s a whole new world underwater. Have you haver gone scuba diving to see it?', scubaDive);
+//yesNo('Rick and Morty has become a really popular show. Do you watch it?', rickMorty);
 
-yesNo('I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', procrastinates);
 
-var heritage = prompt('I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?');
+
+//yesNo('There\'s a whole new world underwater. Have you haver gone scuba diving to see it?', scubaDive);
+
+
+
+//yesNo('I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', procrastinates);
+
+
+
+//var heritage = prompt('I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?');
 console.log(userName + '\'s family comes from: ' + heritage);
 
-yesNo('I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?', primeNumber);
+
+
+//yesNo('I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?', primeNumber);
 
 if (tally < 4){
     alert('You only scored ' + tally + ' out of 7, you didn\'t pass my test. You should read my \'About Me\' page so that we can be better friends');
