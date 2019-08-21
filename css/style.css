@@ -5,9 +5,9 @@
     background-size:cover;
 } */
 
-/* Link to the color palette for this lab http://paletton.com/#uid=31o070kcyqy1SL96AvSjqlAs5gd */
+/* Link to the color palette for this lab https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=EAIaIQobChMI0baIo_2S5AIVh9lkCh3lCwGGEAAYAiAAEgL0V_D_BwE using #2 Scholar */
 
 body{
-    background-color:rgb(211, 196, 129);
-    color:rgb(73, 54, 118);
+    background-color:#F4F3EA; /* cream/beige-y */
+    color:#333D51; /* dark blue ish */
 }
