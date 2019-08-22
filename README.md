@@ -23,3 +23,7 @@ I worked on js and created a function to run yes/no questions, and to score 1 po
 
 August 20, 2019
 Continued to work on js.app . Added functions to make all questions after the first question "react" to the previous yes/no question's result, or in the case they follow a question other than yes/no, they still "react" but without discrimination. Also changed choice of color palette to use for styling.
+
+August 21, 2019
+I've completed converting all of the questions in my About Me game into their function form. It's a substantial amount of text, but it all works out well! I've also decided to set the game to only run when the user clicks a button to initiate the game. I think either Leo or Noah did that(?) and I liked that, since I personally wouldn't want to be forced to have 14 uninvited alerts and prompts EVERY time I reload the page. I'm pretty late on getting this page to where it should be, so let's start making it look like an acutal webpage!
+Given that my entire app.js is now basically one function that spans 107 lines, I think that I want to dedicate a single .js file to just that game function now. I'm not going to do that RIGHT now, but I plan to do so.

@@ -1,5 +1,9 @@
 'use strict';
 
+// One of the other students had set their game to only run after the user clicks a button to begin the game. I thing a whole bunch of uninvited prompts and alerts is pretty annoying, so I decided to do the same thing, and only run the game if the user initiates it. So I've taken the easy route, placed the entire run into the funtcion 'aboutMeGame', and created the button in the html doc (source for learning how https://stackoverflow.com/questions/37287093/starting-a-javascript-prompt-after-a-button-is-clicked).
+// I would later like to create a box in my page that calls the values the user inputs (and tally) to display in a comparison chart. I'll have to scrub this later to find all the locations to pull those values. I'll list them in a handy manner once I do that.
+function aboutMeGame(){
+
 // Initial greeting, followed by prompt for name
 alert('Hello, I\'m Brett! Happy to have you here. I would like to ask you some questions to get to know each other.');
 var userName = prompt('Let\'s start with your first name. I\'d like to know who I\'m talking with!');
@@ -92,12 +96,14 @@ nextYN('So do I! I think that it\'s hilarious. I would like to go on one of thei
 
 nextYN('I really like diving, I hope you enjoyed it!\n\n', 'Oh that\'s too bad, hopefully you get a chance to (if you want to)!\n\n', 'I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', procrastinates);
 
-nextQ('It can be a tough habit to break sometimes, can\'t it?\n\n', 'You\'re fortunate! I can be very troublesome at times.\n\n', 'I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?', heritage);
+nextQ('It can be a tough habit to break sometimes, can\'t it?\n\n', 'You\'re fortunate! It can be very troublesome at times.\n\n', 'I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?', heritage);
 
 nextYN('That\'s pretty neat. I\'m mostly Scandinavian, Irish, and English. I like to joke that my ancestors must have been Vikings!\n\n', 'That\'s pretty neat. I\'m mostly Scandinavian, Irish, and English. I like to joke that my ancestors must have been Vikings!\n\n', 'I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?', primeNumber);
 
 if (tally < 4){
     alert('You only scored ' + tally + ' out of 7, you didn\'t pass my test. You should read my \'About Me\' page to learn more about me, maybe we can be better friends');
 } else {
-    alert('Great. You scored ' + tally + ' out of 7! We should probably be friends! You should read my \'About Me\' page so that we can be better friends');
+    alert('Great. You scored ' + tally + ' out of 7! We should probably be friends! You should read my \'About Me\' page so that we can be better friends.');
+}
+
 }
