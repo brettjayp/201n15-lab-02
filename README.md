@@ -18,5 +18,8 @@ I've now created my main variables, and prompt questions for them. I'll probably
 
 I took the time to convert all the answers to binary values, only to remember I didn't need to. Attention to detail! Correction to the statement in the previous paragraph, there are a total of 7 yes/no questions, so I'll set the threshold to qualify as a friend as 5/7. Will go back and remove the code to convert the non-yes/no answers to binary values.
 
-August 17, 19 
+August 17, 19 (pair programming with James)
 I worked on js and created a function to run yes/no questions, and to score 1 point everytime the user chooses the right answer. And at the end it makes a sum of all points and displays a fancy message according to the obtained score! This saved 70 lines of code. 
+
+August 20, 2019
+Continued to work on js.app . Added functions to make all questions after the first question "react" to the previous yes/no question's result, or in the case they follow a question other than yes/no, they still "react" but without discrimination. Also changed choice of color palette to use for styling.

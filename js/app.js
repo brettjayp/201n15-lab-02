@@ -86,29 +86,18 @@ nextQ('That\'s cool, I think they make great companions!\n\n', 'Oh, I wonder why
 
 alert('Thank you for answering my questions. You\'re halfway there, keep on going!');
 
-//nextYN();
+nextYN('I\'m frequently using my 3D printers to make things, feel free to ask what my last print was!\n\n', 'I\'m frequently using my 3D printers to make things, feel free to ask what my last print was!\n\n', 'Rick and Morty has become a really popular show. Do you watch it?', rickMorty);
 
-//yesNo('Rick and Morty has become a really popular show. Do you watch it?', rickMorty);
+nextYN('So do I! I think that it\'s hilarious. I would like to go on one of their adventures!\n\n', 'Oh that\'s okay! It\'s pretty funny, but it\'s not for every taste.\n\n', 'There\'s a whole new world underwater. Have you haver gone scuba diving to see it?', scubaDive);
 
+nextYN('I really like diving, I hope you enjoyed it!\n\n', 'Oh that\'s too bad, hopefully you get a chance to (if you want to)!\n\n', 'I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', procrastinates);
 
+nextQ('It can be a tough habit to break sometimes, can\'t it?\n\n', 'You\'re fortunate! I can be very troublesome at times.\n\n', 'I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?', heritage);
 
-//yesNo('There\'s a whole new world underwater. Have you haver gone scuba diving to see it?', scubaDive);
-
-
-
-//yesNo('I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', procrastinates);
-
-
-
-//var heritage = prompt('I recently did a DNA test to learn about my heritage. It was very fun to learn about it, and quite insightful. What region does your family come from?');
-console.log(userName + '\'s family comes from: ' + heritage);
-
-
-
-//yesNo('I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?', primeNumber);
+nextYN('That\'s pretty neat. I\'m mostly Scandinavian, Irish, and English. I like to joke that my ancestors must have been Vikings!\n\n', 'That\'s pretty neat. I\'m mostly Scandinavian, Irish, and English. I like to joke that my ancestors must have been Vikings!\n\n', 'I am a bit of a nerd, and like things like prime numbers. Is your favorite number a prime number?', primeNumber);
 
 if (tally < 4){
-    alert('You only scored ' + tally + ' out of 7, you didn\'t pass my test. You should read my \'About Me\' page so that we can be better friends');
+    alert('You only scored ' + tally + ' out of 7, you didn\'t pass my test. You should read my \'About Me\' page to learn more about me, maybe we can be better friends');
 } else {
-    alert('Great. You scored ' + tally + ' out of 7. We should probably be friends! You should read my \'About Me\' page so that we can be better friends');
+    alert('Great. You scored ' + tally + ' out of 7! We should probably be friends! You should read my \'About Me\' page so that we can be better friends');
 }
