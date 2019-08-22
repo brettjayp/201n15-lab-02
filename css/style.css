@@ -5,9 +5,30 @@
     background-size:cover;
 } */
 
-/* Link to the color palette for this lab https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=EAIaIQobChMI0baIo_2S5AIVh9lkCh3lCwGGEAAYAiAAEgL0V_D_BwE using #2 Scholar */
+/* Link to the color palette for this lab https://www.shutterstock.com/blog/10-gorgeous-color-schemes-for-websites?kw=&gclsrc=aw.ds&gclid=EAIaIQobChMI0baIo_2S5AIVh9lkCh3lCwGGEAAYAiAAEgL0V_D_BwE using #2 Scholar
+Hex: 333D51 (blue)/ D3AC2B (yellow)/ CBD0D8 (gray)/ F4F3EA (cream)*/
 
 body{
     background-color:#F4F3EA; /* cream/beige-y */
     color:#333D51; /* dark blue ish */
+}
+
+main{
+    margin-top: 80px;
+}
+
+#titleBar{
+    position: fixed;
+    padding: 10px;
+    background-image: linear-gradient(245deg, #D3AC2B, #CBD0D8);
+    color: #333D51;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 800;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 40px;
 }
