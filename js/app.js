@@ -131,15 +131,43 @@ function guessNumber(){
     for(attempt; attempt < 4; attempt++){
         var localGuess = prompt('Let\'s play a guessing game. I\'ll give you four chances to guess what number I\'m thinking of!');
         numbersGuessed.push(localGuess);
-        console.log('userNameGlobal' + ' just guessed the number ' + localGuess + ' and the correct answer is ' + randomNumber + '.');
+        console.log('the user just guessed the number ' + localGuess + ' and the correct answer is ' + randomNumber + '.');
         if(localGuess == randomNumber){
             attempt = 4;
             alert('Great job! You must be psychic. You guessed ' + localGuess + ' which is correct! Do you think you can guess it right again?')
-        } else if(attempt <3){
+        } else if(attempt < 3){
             alert('Bummer, ' + localGuess + ' isn\'t the correct answer. You should guess again!')
         } else {
             alert('Darn, ' + localGuess + 'wasn\'t the correct answer either. You\'re all out of guesses now.\n\nThe correct answer this time was ' + randomNumber + '. You can play again, maybe you\'ll have better luck!')
         }
     }
-    console.log('userNameGlobal' + ' guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
+    console.log('The user guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
+}
+
+// Here we introduct "lab-03 question-7". We need to ask a question that has multiple correct answers stored in an array, gives the user six attempts, and regardless if the user guesses correctly, all values will be displayed to the user in the end.
+var visitList = ['USA', 'Canada', 'Mexico', 'Guatemala', 'Honduras', 'Costa Rica', 'Bahamas', 'Aruba', 'Chile', 'Brazil', 'Argentina', 'Spain', 'Monaco', 'France', 'Italy', 'England', 'Thailand', 'Malaysia'];
+var visitGuess = [];
+function guessTravel(){
+    alert('In this game, you\'re given six attempts to guess any country that I have visited. Click \'OK\' to play!');
+    for(var attempt = 0; attempt < 6; attempt++){
+        var localGuess = prompt('What\'s your guess?');
+        console.log('In the travel guessing game, the user just guessed ' + localGuess + ".");
+        visitGuess.push(localGuess);
+        localGuess = localGuess.toLowerCase();
+        console.log('The user\'s guess returns a value of ' + visitList.indexOf(localGuess) + ".");
+        // in order to compare the response with all of our values, we need a for loop to locally convert all array values to lower case. We may have to nest or if statement inside of that for loop.
+        for(var i = 0; i < visitList.length ; i++){
+            visitList[i] = visitList[i].toLowerCase();
+        }
+        if(visitList.indexOf(localGuess) > -1){
+            alert('Wow, that\'s impressive, you correctly guessed one of the countries that I\'ve visited!');
+            attempt = 6;
+            break;
+        } else if(attempt < 5){
+            alert('Darn, that isn\'t correct. You still have some tries remaining, you should guess again!');
+        } else {
+            alert('Shoot, you didn\'t guess correctly within 6 tries. That\'s okay though, there\'s so many countries to guess!');
+        }
+    }
+    alert('This is where I\'ll list my array at the end.');
 }
