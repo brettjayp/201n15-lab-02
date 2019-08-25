@@ -22,6 +22,7 @@ function plus1(){
 
 // Here we prepare the function for our first yes/no question. In it, we ask a question, the result of which becomes the value of the specified variable. We output to consol. If user answers yes, we run our tally function, and set our 'lastYN' value to 1 (yes), used later. If user answers no, we still ouput current values to console, and we set 'lastYN' to 0 (no).
 // Another note. I struggled with the battle of global and local variables. This may not be the most efficient or the most tidy way to make my variables into global variables, but they need to be global so that I can return them later on my webpage, and this was the way I finally got to work. When I call each function, I do so when declaring a variable, and in the function, I have to make sure to return the variable's value in order to actually assign a value to the variable. Later, at the bottom of the overall function, I declage a global version of each of the variable I create in this function.
+
 function yesNo(question, varname){
     var varname = prompt(question);
     console.log(question + ' ' + varname);
@@ -124,9 +125,17 @@ function showAnswers(){
 var numbersGuessed = [];
 var randomNumber = Math.floor((Math.random() * 100) + 1);
 var q6 = 0;
-// console.log('The random number currently assigned to guessNumber is ' + randomNumber);
-// function guessNumber(){
-//     for(q6, q6 < 4, q6++){
-
-//     }
-// }
+console.log('The random number currently assigned to guessNumber is ' + randomNumber);
+function guessNumber(){
+    for(q6; q6 < 4; q6++){
+        var localGuess = prompt('Let\'s play a guessing game. I\'ll give you four chances to guess what number I\'m thinking of!');
+        numbersGuessed.push(localGuess);
+        console.log('userNameGlobal' + ' just guessed the number ' + numbersGuessed[numbersGuessed.length - 1] + ' and the correct answer is ' + randomNumber + '.');
+        if(numbersGuessed[numbersGuessed.length - 1] == randomNumber){
+            q6 = 4;
+        }
+    }
+    console.log('userNameGlobal' + ' guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
+}
+guessNumber();
+console.log('userNameGlobal' + ' guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
