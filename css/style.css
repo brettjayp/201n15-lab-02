@@ -37,8 +37,11 @@ main{
     height: 40px;
 }
 
+#titleBar, a:visited {
+  color: #333D51;
+}
+
 /* Below, we will attempt to create a parallax scroll effect for the page. */
-/* <nav id='titleBar'><a href="">Brett Packard</a> | <a href="">Professional</a> | <a href="">Hobby</a> | <a href="">Play My Game</a> | <a href="">About Me</a></nav> */
   
   .parallax { 
     color: #F4F3EA;
@@ -63,4 +66,12 @@ main{
   {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
     padding-top: 40px;
+  }
+
+  .parallax-photo{
+    float: right;
+    display: block;
+    margin-top: 300px;
+    height: 400px;
+    width: auto;
   }
