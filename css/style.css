@@ -13,6 +13,8 @@ body, html{
     color:#333D51; /* dark blue ish */
     height: 100%;
     background-size: cover;
+    width: 100%;
+    margin-left: 0;
 }
 
 main{
@@ -37,14 +39,9 @@ main{
 
 /* Below, we will attempt to create a parallax scroll effect for the page. */
 /* <nav id='titleBar'><a href="">Brett Packard</a> | <a href="">Professional</a> | <a href="">Hobby</a> | <a href="">Play My Game</a> | <a href="">About Me</a></nav> */
-
-/* <div class="parallaxAll" style="height:600px;background-color:#333D51;font-size:36px"> */
   
   .parallax { 
-    /* The image used */
-    /* background-image: url('/home/brett/201n15/201n15-lab-02/css/PhotoLibrary/shingles.jpg'); */
-    /* background-image: url('/home/brett/201n15/201n15-lab-02/css/PhotoLibrary/wood-vertical-brown.jpg');color:#CBD0D8;font-size:128px;text-shadow: 2px 2px 2px #000000 */
-    color: #CBD0D8;
+    color: #F4F3EA;
     font-size: 128px;
     text-shadow: 2px 2px 2px #000000;
     
@@ -56,14 +53,14 @@ main{
     background-size: cover;
   }
 
+  .parallax-sub{
+      color: #F4F3EA;
+      font-size: 64px;
+      text-shadow: 3px 3px 3px #000000;
+  }
+
   .parallax-overlay
   {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
-  }
-
-  .parallax-sub{
-      /* color:#CBD0D8;font-size:64px;text-shadow: 3px 3px 3px #000000 */
-      color: #CBD0D8;
-      font-size: 64px;
-      text-shadow: 3px 3px 3px #000000;
+    padding-top: 40px;
   }
