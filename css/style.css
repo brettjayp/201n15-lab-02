@@ -9,32 +9,32 @@
 Hex: 333D51 (blue)/ D3AC2B (yellow)/ CBD0D8 (gray)/ F4F3EA (cream)*/
 
 body, html{
-    background-color:#F4F3EA; /* cream/beige-y */
-    color:#333D51; /* dark blue ish */
-    height: 100%;
-    background-size: cover;
-    width: 100%;
-    margin-left: 0;
+  background-color:#F4F3EA; /* cream/beige-y */
+  color:#333D51; /* dark blue ish */
+  height: 100%;
+  background-size: cover;
+  width: 100%;
+  margin-left: 0;
 }
 
 main{
-    background-size: cover;
+  background-size: cover;
 }
 
 #titleBar{
-    position: fixed;
-    padding: 10px;
-    background-image: linear-gradient(245deg, #D3AC2B, #CBD0D8);
-    color: #333D51;
-    font-family: Georgia, serif;
-    font-size: 28px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    font-weight: 800;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 40px;
+  position: fixed;
+  padding: 10px;
+  background-image: linear-gradient(245deg, #D3AC2B, #CBD0D8);
+  color: #333D51;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 800;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 40px;
 }
 
 #titleBar, a:visited {
@@ -43,35 +43,35 @@ main{
 
 /* Below, we will attempt to create a parallax scroll effect for the page. */
   
-  .parallax { 
-    color: #F4F3EA;
-    font-size: 128px;
-    text-shadow: 2px 2px 2px #000000;
-    
-    height: 700px; 
+.parallax { 
+  color: #F4F3EA;
+  font-size: 128px;
+  text-shadow: 2px 2px 2px #000000;
   
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  height: 700px; 
 
-  .parallax-sub{
-      color: #F4F3EA;
-      font-size: 64px;
-      text-shadow: 3px 3px 3px #000000;
-  }
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .parallax-overlay
-  {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
-    padding-top: 40px;
-  }
+.parallax-sub{
+    color: #F4F3EA;
+    font-size: 64px;
+    text-shadow: 3px 3px 3px #000000;
+}
 
-  .parallax-photo{
-    float: right;
-    display: block;
-    margin-top: 300px;
-    height: 400px;
-    width: auto;
-  }
+.parallax-overlay
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
+  padding-top: 40px;
+}
+
+.parallax-photo{
+  float: right;
+  display: block;
+  margin-top: 300px;
+  height: 400px;
+  width: auto;
+}
