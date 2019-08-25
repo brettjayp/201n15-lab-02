@@ -29,3 +29,9 @@ August 21, 2019
 -Given that my entire app.js is now basically one function that spans 107 lines, I think that I want to dedicate a single .js file to just that game function now. I'm not going to do that RIGHT now, but I plan to do so.
 -I've added an attractive nav bar to the top of my page, in a fixed position to keep it always present, utilizing a gradient of some of my palettle colors.
 -Added a directory for photo library. Currently contains one photo, an edited stock photo.
+
+August 25, 2019
+-Really getting to this all so late, I'm really far behind. I've been super busy and got sick. Anyways, see below for a summary of my most recent changes.
+-I've completed my general parallax scrolling effect. I pulled some good looking images of wood and shingles for backgrounds, this gives a common theme between them that isn't distracting. I've found that it does make it hard to read text over them, so I added a 0.5 opacity black bar behind the text over the images, and added a white shadow to the text to further increase contrast.
+-I've reworked the "About Me" game in order to assign the user's answers to global variables. This is very important, because I plan to display their answers in the page. I might later decide I want to save all of the answers, output to a persistent log, to keep a record of. There's plenty I could do with that.
+-Good lord, Google is your friend.
