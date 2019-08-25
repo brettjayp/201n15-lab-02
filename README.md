@@ -34,4 +34,4 @@ August 25, 2019
 -Really getting to this all so late, I'm really far behind. I've been super busy and got sick. Anyways, see below for a summary of my most recent changes.
 -I've completed my general parallax scrolling effect. I pulled some good looking images of wood and shingles for backgrounds, this gives a common theme between them that isn't distracting. I've found that it does make it hard to read text over them, so I added a 0.5 opacity black bar behind the text over the images, and added a white shadow to the text to further increase contrast.
 -I've reworked the "About Me" game in order to assign the user's answers to global variables. This is very important, because I plan to display their answers in the page. I might later decide I want to save all of the answers, output to a persistent log, to keep a record of. There's plenty I could do with that.
--Good lord, Google is your friend.
+-Completed the two remaining lab-03 questions. Implemented as buttons, as I don't feel like integrating them into the overall score tally system at this time, due to turning in so late.

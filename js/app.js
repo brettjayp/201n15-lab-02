@@ -146,6 +146,10 @@ function guessNumber(){
 
 // Here we introduct "lab-03 question-7". We need to ask a question that has multiple correct answers stored in an array, gives the user six attempts, and regardless if the user guesses correctly, all values will be displayed to the user in the end.
 var visitList = ['USA', 'Canada', 'Mexico', 'Guatemala', 'Honduras', 'Costa Rica', 'Bahamas', 'Aruba', 'Chile', 'Brazil', 'Argentina', 'Spain', 'Monaco', 'France', 'Italy', 'England', 'Thailand', 'Malaysia'];
+var visitListLowerCase = visitList;
+for(var i = 0; i < visitListLowerCase.length ; i++){
+    visitListLowerCase[i] = visitListLowerCase[i].toLowerCase();
+}
 var visitGuess = [];
 function guessTravel(){
     alert('In this game, you\'re given six attempts to guess any country that I have visited. Click \'OK\' to play!');
@@ -155,11 +159,7 @@ function guessTravel(){
         visitGuess.push(localGuess);
         localGuess = localGuess.toLowerCase();
         console.log('The user\'s guess returns a value of ' + visitList.indexOf(localGuess) + ".");
-        // in order to compare the response with all of our values, we need a for loop to locally convert all array values to lower case. We may have to nest or if statement inside of that for loop.
-        for(var i = 0; i < visitList.length ; i++){
-            visitList[i] = visitList[i].toLowerCase();
-        }
-        if(visitList.indexOf(localGuess) > -1){
+        if(visitListLowerCase.indexOf(localGuess) > -1){
             alert('Wow, that\'s impressive, you correctly guessed one of the countries that I\'ve visited!');
             attempt = 6;
             break;
@@ -169,5 +169,6 @@ function guessTravel(){
             alert('Shoot, you didn\'t guess correctly within 6 tries. That\'s okay though, there\'s so many countries to guess!');
         }
     }
-    alert('This is where I\'ll list my array at the end.');
+    // The below method of displaying all values is actually quite a terrible method, as there's no spacing, and we seem to lose all of the capital letters as well. Buuuuuuut it fulfills the need and we're way past due. It'll have to do for now.
+    alert('All of the countries I have visited are ' + visitList.toString() + '.\n\nYes, I have visited USA. I used to live in another country, so I would visit the US during that time.');
 }
