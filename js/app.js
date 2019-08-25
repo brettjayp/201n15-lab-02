@@ -122,20 +122,24 @@ function showAnswers(){
 }
 
 // Here we will introduce "lab-3 question-6" where we ask the user to guess a numeric value, a-la "guess my favorite number". One stretch goal is to make the number that they must guess a random value. Personally, I wouldn't like to assign a random value as MY favorite number, so we'll do a "guess what number I'm thinking of" game.
+// A temporary note. I plan to introduce this into the webpage as a standalone button/game. Adding it to the main game would be easy enough to do, however, integrating it fully would take some planning. I'll do that work later, let's just get this added to the code so we can submit it as it's well past due.
 var numbersGuessed = [];
-var randomNumber = Math.floor((Math.random() * 100) + 1);
-var q6 = 0;
-console.log('The random number currently assigned to guessNumber is ' + randomNumber);
 function guessNumber(){
-    for(q6; q6 < 4; q6++){
+    var randomNumber = Math.floor((Math.random() * 100) + 1);
+    var attempt = 0;
+    console.log('The random number currently assigned to guessNumber is ' + randomNumber);
+    for(attempt; attempt < 4; attempt++){
         var localGuess = prompt('Let\'s play a guessing game. I\'ll give you four chances to guess what number I\'m thinking of!');
         numbersGuessed.push(localGuess);
-        console.log('userNameGlobal' + ' just guessed the number ' + numbersGuessed[numbersGuessed.length - 1] + ' and the correct answer is ' + randomNumber + '.');
-        if(numbersGuessed[numbersGuessed.length - 1] == randomNumber){
-            q6 = 4;
+        console.log('userNameGlobal' + ' just guessed the number ' + localGuess + ' and the correct answer is ' + randomNumber + '.');
+        if(localGuess == randomNumber){
+            attempt = 4;
+            alert('Great job! You must be psychic. You guessed ' + localGuess + ' which is correct! Do you think you can guess it right again?')
+        } else if(attempt <3){
+            alert('Bummer, ' + localGuess + ' isn\'t the correct answer. You should guess again!')
+        } else {
+            alert('Darn, ' + localGuess + 'wasn\'t the correct answer either. You\'re all out of guesses now.\n\nThe correct answer this time was ' + randomNumber + '. You can play again, maybe you\'ll have better luck!')
         }
     }
     console.log('userNameGlobal' + ' guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
 }
-guessNumber();
-console.log('userNameGlobal' + ' guessed the numbers ' + numbersGuessed[0] + ', ' + numbersGuessed[1] + ', ' + numbersGuessed[2] + ', and ' + numbersGuessed[3]);
