@@ -35,3 +35,7 @@ August 25, 2019
 -I've completed my general parallax scrolling effect. I pulled some good looking images of wood and shingles for backgrounds, this gives a common theme between them that isn't distracting. I've found that it does make it hard to read text over them, so I added a 0.5 opacity black bar behind the text over the images, and added a white shadow to the text to further increase contrast.
 -I've reworked the "About Me" game in order to assign the user's answers to global variables. This is very important, because I plan to display their answers in the page. I might later decide I want to save all of the answers, output to a persistent log, to keep a record of. There's plenty I could do with that.
 -Completed the two remaining lab-03 questions. Implemented as buttons, as I don't feel like integrating them into the overall score tally system at this time, due to turning in so late.
+
+August 26, 2019
+-Time to wrap up the page. I have my parallax scroll effect working, I have all my game functions working (even if I have some of them separated at the moment), and I have my layout that I plan to use. I need to populate my page's sections with information, styling to organize it within those sections, and to put together the display I had in mind to present the results when the user plays my game.
+-I'll start by populating information into my sections. Links, details, information. Then I'll style it, I'm thinking of 0.5 opacity white boxes, with text over in a color from the color palette chosen.
