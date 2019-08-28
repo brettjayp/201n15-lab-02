@@ -1,136 +1,153 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Brett Jay Packard, Veteran, IT, Web. Play my game!</title>
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
-        <script type="text/javascript" src="js/app.js"></script>
-        <style>
-
-        </style>
-        <nav id='titleBar'><a href="#brettPackard">Brett Packard</a> | <a href="#professional">Professional</a> | <a href="#hobby">Hobby</a> | <a href="#playMyGame">Play My Game</a> | <a href="#aboutMe">About Me</a></nav>
-    </head>
-    <body>
-        <header>
-            <!-- <nav id='titleBar'><a href="#brettPackard">Brett Packard</a> | <a href="#professional">Professional</a> | <a href="#hobby">Hobby</a> | <a href="#playMyGame">Play My Game</a> | <a href="#aboutMe">About Me</a></nav> -->
-        </header>
-        <main>
-            <!-- Brett Packard -->
-            <div id="brettPackard" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-brown.jpg')">
-                <img class="parallax-photo" src="css/PhotoLibrary/portrait.jpg" sytle="position:absolute, bottom:0;">
-                <div class="parallax-overlay">
-                    Brett Packard
-                    <div class="parallax-sub">
-                        Student | Veteran | IT Professional | Front-End Developer
-                    </div>
-                </div>
-            </div>
-                
-            <div  class="info-block">
-                This is a section where I will put some overview information about myself.
-            </div>
-            
-            <!-- Professional -->
-            <div id="professional" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-gray.jpg')">
-                <div class="parallax-overlay">
-                        Professional
-                        <div class="parallax-sub">
-                            LinkedIn | GitHub | Resume | Projects
-                        </div>
-                </div>
-            </div>
-                
-            <div class="info-block">
-                <p>
-                    In this section, I will include some information relevant to my professional career. I will include a link to my LinkedIn profile, a download link of my current resume, a link to my GitHub, and possibly a link to some projects when I can do so.
-                </p>
-                <ul>
-                    <lh>Positions Held</lh>
-                    <li>Data Center Technician, AWS</li>
-                    <li>Infantyman, CBRN Officer, US Army</li>
-                    <li>Project Manager, Spark Solutions Group</li>
-                </ul>
-                <div>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/brettjaypackard/">LinkedIn Profile</a></li>
-                        <li><a href="https://github.com/brettjayp">GitHub Page</a></li>
-                        <li><a href="https://my.indeed.com/p/brettp-bo51bdg/profile">Indeed Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Hobby -->
-            <div id="hobby" class="parallax" style="background-image: url('css/PhotoLibrary/shingles.jpg')">
-                <div class="parallax-overlay">
-                    Hobby
-                    <div class="parallax-sub">
-                        Free Time | Dog | Family
-                    </div>
-                </div>
-            </div>
-
-            <div  class="info-block">
-                <p>
-                    This is where I'll list some of the things I'll do in my free time. I might change this a little bit to cover a more broad range of personal information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non pretium diam. Vestibulum velit odio, consequat nec ipsum ut, bibendum cursus libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer sem ex, lobortis id justo eu, porta lobortis nisl. In elementum rutrum orci, et dignissim urna aliquet at. Pellentesque eu rhoncus orci. Aenean et ligula nisi. Morbi at velit vel magna condimentum vestibulum non sit amet mauris. Ut et molestie lacus. Praesent vehicula leo at erat rutrum blandit. Nunc mollis vulputate ultricies. Etiam ut arcu ac enim tristique eleifend. Sed viverra placerat ex, eget lacinia magna malesuada viverra. Donec mi nisl, imperdiet sed commodo non, pellentesque in ex.
-                </p>
-                <p>
-                    Vivamus ac suscipit sem, nec ultrices metus. In varius fringilla magna. Praesent semper ex sit amet augue scelerisque vehicula. Ut tristique sed sapien sed consectetur. Etiam vel porta ipsum, in condimentum diam. Integer sit amet egestas dui, sit amet bibendum arcu. Fusce ultrices ut metus nec varius. Donec quis tempor urna. Sed varius tincidunt ipsum vitae elementum.
-                </p>
-                <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean blandit diam ut lacinia porttitor. Vestibulum eu dignissim dui. Duis pellentesque porta facilisis. Nulla viverra sem id sapien varius, fringilla malesuada enim aliquet. Pellentesque quis elit leo. Fusce ac nulla tempor, efficitur nibh vitae, ornare ligula.
-                </p>
-                <p>
-                    Phasellus sed aliquam enim, et rhoncus purus. Nam ultrices elit ut rutrum finibus. Mauris molestie augue tellus, sit amet dictum massa dictum sit amet. Maecenas fringilla ut sem id lobortis.
-                </p>
-            </div>
-
-            <!-- Play My Game -->
-            <div id="playMyGame" class="parallax" style="background-image: url('css/PhotoLibrary/wood-logs-topview.jpg')">
-                <div class="parallax-overlay">
-                    Play My Game
-                    <div class="parallax-sub">
-                        Play | Your Results | Comparison
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-block">
-                This is where a visitor will come in order to play my "About Me" game. I will also have a table here that will list some of the information about their answers.<br/>
-                <button onclick="aboutMeGame()">Start Game</button>
-                <button onclick="showAnswers()">Show Answers</button>
-                <button onclick="guessNumber()">Guess My Number</button>
-                <button onclick="guessTravel()">Guess Where I've Traveled</button>
-            </div>
-
-            <!-- About Me -->
-            <div id="aboutMe" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-white.jpg')">
-                <div class="parallax-overlay">
-                    About Me
-                    <div class="parallax-sub">
-                        Contact | Links
-                    </div>
-                </div>
-            </div>
-
-            <div  class="info-block">
-                <p>This will be an important section. It will contain some summary information, most important links, and information about how to contact me.</p>
-                <ol style="margin-left:20px;">
-                    <lh>Top 10 Countries I'd Like To Visit</lh>
-                    <li>Norway</li>
-                    <li>Spain</li>
-                    <li>Ireland</li>
-                    <li>Germany</li>
-                    <li>Italy</li>
-                    <li>Phillippines</li>
-                    <li>Aruba</li>
-                    <li>Cozumel</li>
-                    <li>New Zealand</li>
-                    <li>Saint Lucia</li>
-                </ol>
-            </div>
-
-        </main>
-        <!-- <footer>
-            <p>footer placeholder</p>
-        </footer> -->
-    </body>
+   <head>
+       <title>Brett Jay Packard, Veteran, IT, Web. Play my game!</title>
+       <link href="css/style.css" type="text/css" rel="stylesheet" />
+       <script type="text/javascript" src="js/app.js"></script>
+       <style>
+ 
+       </style>
+       <nav id='titleBar'><a href="#brettPackard">Brett Packard</a> | <a href="#professional">Professional</a> | <a href="#hobby">Hobby</a> | <a href="#playMyGame">Play My Game</a> | <a href="#aboutMe">About Me</a> | <a href="#contact">Contact</a></nav>
+   </head>
+   <body>
+       <header>
+           <!-- <nav id='titleBar'><a href="#brettPackard">Brett Packard</a> | <a href="#professional">Professional</a> | <a href="#hobby">Hobby</a> | <a href="#playMyGame">Play My Game</a> | <a href="#aboutMe">About Me</a></nav> -->
+       </header>
+       <main>
+           <!-- Brett Packard -->
+           <div id="brettPackard" class="parallax" style="background-image: url('css/PhotoLibrary/wood-logs-topview.jpg')">
+               <img class="parallax-photo" src="css/PhotoLibrary/portrait.jpg" sytle="position:absolute, bottom:0;">
+               <div class="parallax-overlay">
+                   Brett Packard
+                   <div class="parallax-sub">
+                       Student | Veteran | IT Professional | Front-End Developer
+                   </div>
+               </div>
+           </div>
+              
+           <div  class="info-block">
+               This is a section where I will put some overview information about myself.
+           </div>
+          
+           <!-- Professional -->
+           <div id="professional" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-gray.jpg')">
+               <div class="parallax-overlay">
+                       Professional
+                       <div class="parallax-sub">
+                           LinkedIn | GitHub | Resume | Projects
+                       </div>
+               </div>
+           </div>
+              
+           <div class="info-block">
+               <p>
+                   In this section, I will include some information relevant to my professional career. I will include a link to my LinkedIn profile, a download link of my current resume, a link to my GitHub, and possibly a link to some projects when I can do so.
+               </p>
+               <ul>
+                   <lh>Positions Held</lh>
+                   <li>Data Center Technician, AWS</li>
+                   <li>Infantyman, CBRN Officer, US Army</li>
+                   <li>Project Manager, Spark Solutions Group</li>
+               </ul>
+               <div>
+                   <ul>
+                       <li><a href="https://www.linkedin.com/in/brettjaypackard/">LinkedIn Profile</a></li>
+                       <li><a href="https://github.com/brettjayp">GitHub Page</a></li>
+                       <li><a href="https://my.indeed.com/p/brettp-bo51bdg/profile">Indeed Profile</a></li>
+                   </ul>
+               </div>
+           </div>
+ 
+           <!-- Hobby -->
+           <div id="hobby" class="parallax" style="background-image: url('css/PhotoLibrary/shingles.jpg')">
+               <div class="parallax-overlay">
+                   Hobby
+                   <div class="parallax-sub">
+                       Free Time | Dog | Family
+                   </div>
+               </div>
+           </div>
+ 
+           <div  class="info-block">
+               This is where I'll list some of the things I'll do in my free time. I might change this a little bit to cover a more broad range of personal information.
+              
+               <p>Lorem ipsum</p>
+           </div>
+ 
+           <!-- Play My Game -->
+           <div id="playMyGame" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-brown.jpg')">
+               <div class="parallax-overlay">
+                   Play My Game
+                   <div class="parallax-sub">
+                       Play | Your Results | Comparison
+                   </div>
+               </div>
+           </div>
+ 
+           <div class="info-block">
+               This is where a visitor will come in order to play my "About Me" game. I will also have a table here that will list some of the information about their answers.<br/>
+               <button onclick="aboutMeGame()">Start Game</button>
+               <button onclick="showAnswers()">Show Answers</button>
+               <button onclick="guessNumber()">Guess My Number</button>
+               <button onclick="guessTravel()">Guess Where I've Traveled</button>
+           </div>
+ 
+           <!-- About Me -->
+           <div id="aboutMe" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-white.jpg')">
+               <div class="parallax-overlay">
+                   About Me
+                   <div class="parallax-sub">
+                       Personal Facts | Background | etc
+                   </div>
+               </div>
+           </div>
+ 
+           <div  class="info-block">
+               <p>This sections will contain some personal information about who I am.</p>
+               <ul style="float:left" class="white-box">
+                   <lh>Top 10 Countries I'd Like To Visit</lh>
+                   <li>Norway</li>
+                   <li>Spain</li>
+                   <li>Ireland</li>
+                   <li>Germany</li>
+                   <li>Italy</li>
+                   <li>Phillippines</li>
+                   <li>Aruba</li>
+                   <li>Cozumel</li>
+                   <li>New Zealand</li>
+                   <li>Saint Lucia</li>
+               </ul>
+               <ul style="margin-left:30%" class="white-box">
+                   <lh>Top 10 Foods I enjoy</lh>
+                   <li>Quesadilla</li>
+                   <li>Curry</li>
+                   <li>Pizza</li>
+                   <li>Paella</li>
+                   <li>Steak</li>
+                   <li>Burger</li>
+                   <li>Sandwich</li>
+                   <li>Burrito</li>
+                   <li>Taco</li>
+                   <li>Frozen Custard</li>
+               </ul>
+           </div>
+ 
+           <!-- Contact -->
+           <div id="contact" class="parallax" style="background-image: url('css/PhotoLibrary/wood-horizontal-dark.jpg')">
+               <div class="parallax-overlay">
+                   Contact Information
+               </div>
+           </div>
+ 
+           <div class="info-block">
+               <p>This section will hold my contact information, and some links again.</p>
+               <p class="white-box" style="float:top;;width:40%;text-align:center;">Brett Jay Packard<br />Cell: (801) 915 0798<br />Email: brettjayp@gmail.com<br />LinkedIn: <a href="https://my.indeed.com/p/brettp-bo51bdg/profile">Profile</a></p>
+           </div>
+ 
+       </main>
+       <!-- <footer>
+           <p>footer placeholder</p>
+       </footer> -->
+   </body>
 </html>
+
