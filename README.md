@@ -40,6 +40,10 @@ August 26, 2019
 -Time to wrap up the page. I have my parallax scroll effect working, I have all my game functions working (even if I have some of them separated at the moment), and I have my layout that I plan to use. I need to populate my page's sections with information, styling to organize it within those sections, and to put together the display I had in mind to present the results when the user plays my game.
 -I'll start by populating information into my sections. Links, details, information. Then I'll style it, I'm thinking of 0.5 opacity white boxes, with text over in a color from the color palette chosen.
 
-August 27, 20109
+August 27, 2019
 -Wow. This whole time I've been running my linux environment as a VM on my Windows machine, running it exactly as the pre-work described. That was proving troublesome. So I've spent some time to migrate from a VM to a dual boot solution, freeing up my system's resources and cutting out bugs. The first time that I finally opened my webpage after getting set up, my webpage looks like CRAP!!! First off, no photos. Dummy me, I was referencing all my photos by their absolute paths, rather than their relative paths. Second off, everything was oversized. Again, dummy me, I was not running the VM in it's native resolution, I was stretching it to fit. As a result, running my page on a system running properly, I notice that everyting I saw was not running at the proper resolution, and appeared different than it would on another system.
  First, I need to fix this. Fortunately, this should be really easy. Running my page at 50% makes it look perfect! So I'll start by halving every size I've set. Second, lessons learned!
+
+ August 29, 2019
+ -I've been fighting to get DIV's side by side. I should know how by now. I found a neat way doing so while looking online (using flex and flex-grow), but what I take from it is more fundamental, and that's that I need to be mindful of trying to fit one thing in another. If I had tried creating a container DIV for these boxes in the first place, I don't think I would have struggled so much.
+ -
