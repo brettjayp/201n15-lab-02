@@ -98,8 +98,10 @@ main{
   margin-bottom: 0px;
 }
 
-.white-box{
-  background-color: rgba(255, 255, 255, 0.3);
+.dark-box{
+  /* background-color: rgba(0, 4, 36, 0.637); */
+  /* #242b38 is roughly a darker #333D51 */
+  background-color: #242b3890;
   width: 25%;
   margin-left: 5%;
   margin-right: 5%;
@@ -109,4 +111,10 @@ main{
  
  .box-container{
   display: flex;
+ }
+
+.info-block > p{
+   text-indent: 20px;
+   margin-left: 70px;
+   margin-right: 40px;
  }

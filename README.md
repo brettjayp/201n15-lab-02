@@ -46,3 +46,8 @@ August 27, 2019
 
 August 29, 2019
 -I've been fighting to get DIV's side by side. I should know how by now. I found a neat way doing so while looking online (using flex and flex-grow), but what I take from it is more fundamental, and that's that I need to be mindful of trying to fit one thing in another. If I had tried creating a container DIV for these boxes in the first place, I don't think I would have struggled so much.
+
+August 30, 2019
+-Cleaned up a few lines of unnecessary code in css and html. Adding more content to html page. Improved styling a little bit. Added a link to a google image search for dogs (I know, I now have an almost perfect website now, you're welcome, woof). Decluttered some things in the html page. Fixed linter callouts. Almost ready to submit for lab 5b.
+-Still need to: __Ensure 1 or 2 checkmarks for text contrast via Chrome (stretch). __Create and save an SSH key for working with GitHub. __I need to (eventually) find a list that actually works for using an ordered list, currently I just made one an ordered list for the sake of having at least one. __Have answers for my main guessing game go into an array, though I do use an array already for my last guessing game. __Audit my site for accessability. __Deploy my page on GitHub, this is what I'm doing next.
+-About to deploy on GitHub.
