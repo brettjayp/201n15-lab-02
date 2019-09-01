@@ -37,7 +37,7 @@ main{
   height: 20px;
 }
 
-#titleBar, a:visited {
+#titleBar > a:visited {
   color: #333D51;
 }
 
@@ -117,4 +117,8 @@ main{
    text-indent: 20px;
    margin-left: 70px;
    margin-right: 40px;
+ }
+
+ .dark-box > ol > li > a:visited{
+   color: #CBD0D8;
  }
