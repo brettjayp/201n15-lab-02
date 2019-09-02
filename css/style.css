@@ -127,3 +127,12 @@ main{
  .dark-box > ol > li > a:link{
   color: #F4F3EA;
 }
+
+/* Applying the same two rules above to UL lists as well. I'll change the way I reference these links later so I can erase a few lines */
+.dark-box > ul > li > a:visited{
+  color: #CBD0D8;
+}
+
+.dark-box > ul > li > a:link{
+ color: #F4F3EA;
+}
