@@ -122,3 +122,8 @@ main{
  .dark-box > ol > li > a:visited{
    color: #CBD0D8;
  }
+
+ /* not the best color to use at the moment, as it looks too close to the gray, but it'll do for now as it's a much better contrast than the standard blue */
+ .dark-box > ol > li > a:link{
+  color: #F4F3EA;
+}
