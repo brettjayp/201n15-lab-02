@@ -1,16 +1,11 @@
+/* eslint-disable eqeqeq */
 'use strict';
 
-// eslint-disable-next-line no-undef
-var gameResultsGlobal = []; // I'm trying something new. Here is where I will store the values of the game results for global use.
-// eslint-disable-next-line no-unused-vars
+var gameResultsGlobal = [];
 var userName = '';
-// eslint-disable-next-line no-unused-vars
 var gameTally = 0;
 
-//
 //  Here is the function I will call to ask each question.
-//
-// eslint-disable-next-line no-unused-vars
 function aboutMeQuestion(varName, question, myAnswer, ifYes, ifNo, yesNo){
   // Here I will create the question object that I will append to gameResultsGlobal
   varName = {
@@ -27,9 +22,15 @@ function aboutMeQuestion(varName, question, myAnswer, ifYes, ifNo, yesNo){
       console.log(`This question's object is ${this.title}, the user's answer is ${this.userAnswer}, compared to ${this.compareTo} it is ${this.isCorrect}.`);
     },
 
-    yes: function(){
-      if(varName.isYesNo === true){
+    // Here I create a function check the answers the user gives me. In the first two scenarios, we check if the question is a yesNo question, and then check if the user answer matches my answer, either yes or no. If they match, varName.isCorrect is marked true, and the tally is increased. If it is not a yesNo question, then there is no right or wrong answer, and I mark .isCorrect and .compareTo as N/A
+    check: function(){
+      if(varName.isYesNo === true && varName.compareTo == 'yes'){
         if(varName.userAnswer.toLowerCase() == 'yes' || varName.userAnswer.toLowerCase() == 'y'){
+          varName.isCorrect = true;
+          gameTally++;
+        }
+      } else if(varName.isYesNo === true && varName.compareTo == 'no'){
+        if(varName.userAnswer.toLowerCase() =='no' || varName.userAnswer.toLowerCase() == 'n'){
           varName.isCorrect = true;
           gameTally++;
         }
@@ -44,59 +45,50 @@ function aboutMeQuestion(varName, question, myAnswer, ifYes, ifNo, yesNo){
   // Here is where the question will happen IF the previous question was to ask the user's name.
   if(gameResultsGlobal.length === 1){
     varName.userAnswer = prompt(`${question}`);
-    varName.yes();
+    varName.check();
     console.log(gameResultsGlobal);
   } else {
     // Here is where the question will happen IF the previous question WAS a yesNo question AND the answer WAS CORRECT.
     if(gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === true){
       varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
-      varName.yes();
+      varName.check();
     }
     // Here is where the question will happen IF the previous question WAS a yesNo question AND the answer WAS NOT CORRECT.
     else if (gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === false){
       varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifFalse}\n\n${question}`);
-      varName.yes();
+      varName.check();
     }
-    // Here is where the question will happen IF the previous question WAS NOT a yesNo question, regardless if THIS question is a yesNo question.
+    // Here is where the question will happen IF the previous question WAS NOT a yesNo question, regardless if this question is a yesNo question.
     else {
       varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
-      varName.yes();
+      varName.check();
     }
   }
 
-  // Here I push the details about the question object to gameResultsGlobal.
+  // Here I push the details about the question's object to gameResultsGlobal.
   gameResultsGlobal.push(varName);
 
-  // This is the last thing I want to do in this function. This is just the output I want to see in the console.log after the user answers their questions.
+  // This is the last thing I want to do in this function. This is just the output I want to see in the console.log after the user answers their questions. I could just call varName.output, but I don't want to do that, because by calling this from gameResultsGlobal, I can be confident that the object was successfully recorded.
   gameResultsGlobal[gameResultsGlobal.length-1].output();
 }
 
 // Here is the actual game itself. This is the function that will run when the user clicks to begin the game.
 // eslint-disable-next-line no-unused-vars
 function aboutMeGame(){
-  //  Here I will declare any variable I want kept inside the function/game.
-
-  //  Here I create the functions I need to call within the game.
-
   //  Here I greet the user and prompt them for their name.
   alert('Hello, I\'m Brett! Happy to have you here. I would like to ask you some questions to get to know each other.');
   userName = prompt('Let\'s start with your first name. I\'d like to know who I\'m talking with!');
-  gameResultsGlobal.push(userName);
+  gameResultsGlobal.push(userName); // Yes, I save the user's name to two locations. One for the array, one to be called easily for whatever purpose.
   console.log(`The user's name is ${gameResultsGlobal[0]}`);
   alert(`Happy to meet you, ${gameResultsGlobal[0]}! Thank you for coming here. Let's begin with a quick game.`);
 
-  //  Here I ask the first 5 questions.
-  //  Remember. (varName, question, myAnswer, ifYes, ifNo, isYesNo)
+  //  Here I ask the first 5 questions, followed by a halfway statement, then the last 5 questions.
   aboutMeQuestion('likesDogs', 'Do you enjoy spending time with dogs?', 'yes', 'Hey, awesome! So do I. In fact, I go to the dog park frequently.', 'Oh, bummer. I think they\'re usually pretty fun.', true);
   aboutMeQuestion('likesTravel', 'Do you like to travel around at all?', 'yes', 'Great, I enjoy traveling too! I recently enjoyed a cruise in Europe!', 'Hey, traveling isn\'t for everybody. Staying local is pretty cool too, there\'s lots to do here!', true);
   aboutMeQuestion('likeToVisit', 'Where is somewhere you would like to visit?', '', 'There are lots of places I would still like to visit.', '', false);
   aboutMeQuestion('hasPets', 'I have one dog, a sweet and hyper puppy still. Have you ever had any pets?', 'yes', 'That\'s cool, I think they make great companions!', 'Oh, I wonder why not. I think they are great fun.', true);
   aboutMeQuestion('diy', 'I like to create things, whether with my hands or my mind. What\'s the last thing you built or made yourself?', '', 'I\'m frequently using my 3D printers to make things, feel free to ask what my last print was!', '', false);
-
-  //  Here I make a statement halfway.
   alert('Thank you for answering my questions. You\'re halfway there, keep on going!');
-
-  //  Here I ask the remaining 5 question.
   aboutMeQuestion('rickMorty', 'Rick and Morty has become a really popular show. Do you watch it?', 'yes', 'So do I! I think that it\'s hilarious. I would like to go on one of their adventures!', 'Oh that\'s okay! It\'s pretty funny, but it\'s not for every taste.', true);
   aboutMeQuestion('scubaDive', 'There\'s a whole new world underwater. Have you haver gone scuba diving to see it?', 'yes', 'I really like diving, I hope you enjoyed it!', 'Oh that\'s too bad, hopefully you get a chance to (if you want to)!', true);
   aboutMeQuestion('procrastinates', 'I don\'t like to be lazy, but sometimes I tend to procrastinate things. Do you do that as well?', 'yes', 'It can be a tough habit to break sometimes, can\'t it?', 'You\'re fortunate! It can be very troublesome at times.', true);
@@ -111,18 +103,16 @@ function aboutMeGame(){
   }
 }
 
-
-
-// The below is commented out at this time because the 'x'Global variables no longer exist. Those are now obsolete aver I have converted my game to use object literals. I'll redo them later, and re-enable the results button once I do (unless the results chart makes it obsolete too).
-//
-// // var likesDogs, likesTravel, likeToVisit, hasPets, diy, rickMorty, scubaDive, procrastinates, heritage, primeNumber;
-// // eslint-disable-next-line no-unused-vars
-// function showAnswers(){
-//   // eslint-disable-next-line no-undef
-//   alert(likesDogsGlobal + ' ' + likesTravelGlobal + ' ' + likeToVisitGlobal + ' ' + hasPetsGlobal + ' ' + diyGlobal + ' ' + rickMortyGlobal + ' ' + scubaDiveGlobal + ' ' + procrastinatesGlobal + ' ' + heritageGlobal + ' ' + primeNumberGlobal);
-//   // eslint-disable-next-line no-undef
-//   alert(userNameGlobal);
-// }
+// Here I create a way for the user to view their answers to the aboutMe game. As it is, the output is beyond the size of the alert box, which is what I used. So I've decided to also output this to the console.log, with a message in the alert box to indicate this.
+// eslint-disable-next-line no-unused-vars
+function showAnswers(){
+  var string = '';
+  for(i = 1; i < gameResultsGlobal.length; i++){
+    string = string + `Question ${i}\nTitle: ${gameResultsGlobal[i].title}\nUser's Answer: ${gameResultsGlobal[i].userAnswer}\nMy Answer: ${gameResultsGlobal[i].compareTo}\nIs Answer Correct?: ${gameResultsGlobal[i].isCorrect}\nIs ${gameResultsGlobal[i].title} a Yes/No Question?: ${gameResultsGlobal[i].isYesNo}\n\n`;
+  }
+  alert(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
+  console.log(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
+}
 
 // Here we will introduce "lab-3 question-6" where we ask the user to guess a numeric value, a-la "guess my favorite number". One stretch goal is to make the number that they must guess a random value. Personally, I wouldn't like to assign a random value as MY favorite number, so we'll do a "guess what number I'm thinking of" game.
 // A temporary note. I plan to introduce this into the webpage as a standalone button/game. Adding it to the main game would be easy enough to do, however, integrating it fully would take some planning. I'll do that work later, let's just get this added to the code so we can submit it as it's well past due.
