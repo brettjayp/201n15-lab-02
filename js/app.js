@@ -1,9 +1,9 @@
 /* eslint-disable eqeqeq */
 'use strict';
 
-var gameResultsGlobal = [];
-var userName = '';
-var gameTally = 0;
+var gameResultsGlobal = []; // This array is where I will store all the results from the 'About Me' game.
+var userName = ''; // Although the userName is already stored at gameResultsGlobal[0], I'd like to be able to call it by userName as well.
+var gameTally = 0; // This is the tally variable for scoring the 'About Me' game.
 
 //  Here is the function I will call to ask each question.
 function aboutMeQuestion(varName, question, myAnswer, ifYes, ifNo, yesNo){
@@ -46,23 +46,18 @@ function aboutMeQuestion(varName, question, myAnswer, ifYes, ifNo, yesNo){
   if(gameResultsGlobal.length === 1){
     varName.userAnswer = prompt(`${question}`);
     varName.check();
-    console.log(gameResultsGlobal);
-  } else {
     // Here is where the question will happen IF the previous question WAS a yesNo question AND the answer WAS CORRECT.
-    if(gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === true){
-      varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
-      varName.check();
-    }
+  } else if(gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === true){
+    varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
+    varName.check();
     // Here is where the question will happen IF the previous question WAS a yesNo question AND the answer WAS NOT CORRECT.
-    else if (gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === false){
-      varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifFalse}\n\n${question}`);
-      varName.check();
-    }
+  } else if (gameResultsGlobal[gameResultsGlobal.length-1].isYesNo === true && gameResultsGlobal[gameResultsGlobal.length-1].isCorrect === false){
+    varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifFalse}\n\n${question}`);
+    varName.check();
     // Here is where the question will happen IF the previous question WAS NOT a yesNo question, regardless if this question is a yesNo question.
-    else {
-      varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
-      varName.check();
-    }
+  } else {
+    varName.userAnswer = prompt(`${gameResultsGlobal[gameResultsGlobal.length-1].ifTrue}\n\n${question}`);
+    varName.check();
   }
 
   // Here I push the details about the question's object to gameResultsGlobal.
@@ -97,9 +92,9 @@ function aboutMeGame(){
 
   //  Here I give the user their results and end the game.
   if (gameTally < 4){
-    alert('You only scored ' + gameTally + ' out of 7, you didn\'t pass my test. You should read my \'About Me\' page to learn more about me, maybe we can be better friends');
+    alert(`You only scored ${gameTally} out of 7, you didn't pass my test. You should read my 'About Me' page to learn more about me, maybe we can be better friends`);
   } else {
-    alert('Great. You scored ' + gameTally + ' out of 7! We should probably be friends! You should read my \'About Me\' page so that we can be better friends.');
+    alert(`Great. You scored ${gameTally} out of 7! We should probably be friends! You should read my 'About Me' page so that we can be better friends.`);
   }
 }
 
