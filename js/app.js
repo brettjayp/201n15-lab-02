@@ -102,11 +102,13 @@ function aboutMeGame(){
 // eslint-disable-next-line no-unused-vars
 function showAnswers(){
   var string = '';
-  for(i = 1; i < gameResultsGlobal.length; i++){
-    string = string + `Question ${i}\nTitle: ${gameResultsGlobal[i].title}\nUser's Answer: ${gameResultsGlobal[i].userAnswer}\nMy Answer: ${gameResultsGlobal[i].compareTo}\nIs Answer Correct?: ${gameResultsGlobal[i].isCorrect}\nIs ${gameResultsGlobal[i].title} a Yes/No Question?: ${gameResultsGlobal[i].isYesNo}\n\n`;
+  if(gameResultsGlobal.length < 1){alert('I\'m sorry, but it seems as though you haven\'t actally played the game yet. Why don\'t you start there?');} else {
+    for(i = 1; i < gameResultsGlobal.length; i++){
+      string = string + `Question ${i}\nTitle: ${gameResultsGlobal[i].title}\nUser's Answer: ${gameResultsGlobal[i].userAnswer}\nMy Answer: ${gameResultsGlobal[i].compareTo}\nIs Answer Correct?: ${gameResultsGlobal[i].isCorrect}\nIs ${gameResultsGlobal[i].title} a Yes/No Question?: ${gameResultsGlobal[i].isYesNo}\n\n`;
+    }
+    alert(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
+    console.log(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
   }
-  alert(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
-  console.log(`Please see below for the results of the 'About Me' game. You may need to scroll to see all the results. Not all the results will show, you can check the console log for a copy of this full message.\n\nUser's Name: ${gameResultsGlobal[0]}\n\n${string}`);
 }
 
 // Here we will introduce "lab-3 question-6" where we ask the user to guess a numeric value, a-la "guess my favorite number". One stretch goal is to make the number that they must guess a random value. Personally, I wouldn't like to assign a random value as MY favorite number, so we'll do a "guess what number I'm thinking of" game.
