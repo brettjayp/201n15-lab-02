@@ -113,16 +113,23 @@
                </div>
            </div>
  
-           <div class="info-block">
-               <p>The buttons below initiate a few interactive functions I have created. "Start Game" presents you with a series of prompts that ask you for your name, then take you through 10 questions about yourself, each presenting a small opportunity to learn a bit about me. In the end, there is a tally system used to indicate whether or not we would likely be friends (it's a trick, of course we could be friends!). The second button, "Show Answers", is only a simple return of the results from "Start Game". The next game is "Guess My Number", where the system selects a random number (1-100), and you have 4 chances to guess the number! Lastly, we have "Guess Where I've Traveled", where you have 6 chances to guess any one of the countries I have traveled to.</p>
-               <p>In each of these games, there is no need to use correct capitalization of your letters, and for the yes or no questions, you can use yes/y and no/n.</p>
-               <div style="margin-left:90px;margin-bottom:6px">
+            <div class="info-block">
+                <p>The buttons below initiate a few interactive functions I have created. "Start Game" presents you with a series of prompts that ask you for your name, then take you through 10 questions about yourself, each presenting a small opportunity to learn a bit about me. In the end, there is a tally system used to indicate whether or not we would likely be friends (it's a trick, of course we could be friends!). The second button, "Show Answers", is only a simple return of the results from "Start Game". The next game is "Guess My Number", where the system selects a random number (1-100), and you have 4 chances to guess the number! Lastly, we have "Guess Where I've Traveled", where you have 6 chances to guess any one of the countries I have traveled to.</p>
+                <p>In each of these games, there is no need to use correct capitalization of your letters, and for the yes or no questions, you can use yes/y and no/n.</p>
+                <div style="margin-left:90px;margin-bottom:6px">
                     <button onclick="aboutMeGame()">Start Game</button>
-                    <button onclick="showAnswers()">Show Answers</button>
+                    <!-- <button onclick="showAnswers()">Show Answers</button> -->
                     <button onclick="guessNumber()">Guess My Number</button>
                     <button onclick="guessTravel()">Guess Where I've Traveled</button>
-               </div>
-           </div>
+                </div>
+                <div class="box-container">
+                    <div class="dark-box" style="float:left">
+                        <ol id="resultsList">
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
  
            <!-- About Me -->
            <div id="aboutMe" class="parallax" style="background-image: url('css/PhotoLibrary/wood-vertical-white.jpg')">
