@@ -51,3 +51,6 @@ August 30, 2019
 -Cleaned up a few lines of unnecessary code in css and html. Adding more content to html page. Improved styling a little bit. Added a link to a google image search for dogs (I know, I now have an almost perfect website now, you're welcome, woof). Decluttered some things in the html page. Fixed linter callouts. Almost ready to submit for lab 5b.
 -Still need to: __Ensure 1 or 2 checkmarks for text contrast via Chrome (stretch). __Create and save an SSH key for working with GitHub. __I need to (eventually) find a list that actually works for using an ordered list, currently I just made one an ordered list for the sake of having at least one. __Have answers for my main guessing game go into an array, though I do use an array already for my last guessing game. __Audit my site for accessability. __Deploy my page on GitHub, this is what I'm doing next.
 -About to deploy on GitHub.
+
+September 02, 2019
+-Having now watched class 6, getting more comfortable with object literals, I decided to re-write my "About Me" game. It looks a ton better, and I think I'm definitely more comfortable working with arrays and object literals. I also had to re-write the button to display the results. The console.log output from that button looks great!
